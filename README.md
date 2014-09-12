@@ -11,7 +11,7 @@ Inject a property file into the Spring Environment. This is needed if you want t
 
 The variable ${customer} should now be read from a variable.
 
-According to a [http://spring.io/blog/2011/02/15/spring-3-1-m1-unified-property-management/](blog entry from spring) this should be possible.
+According to a blog entry from spring (http://spring.io/blog/2011/02/15/spring-3-1-m1-unified-property-management/) this should be possible.
 
 Unfortunately it does not work when you use a property-placeholder:
 
