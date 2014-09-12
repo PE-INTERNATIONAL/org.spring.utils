@@ -18,7 +18,6 @@
  */
 package org.spring.common.utils;
 
-import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContextInitializer;
@@ -64,7 +63,7 @@ public class CustomApplicationContextInitializer implements ApplicationContextIn
 
    private String getPropertiesFileLoadOrderFrom(final ConfigurableEnvironment environment) {
       String propertiesFileLoadOrder = environment.getProperty("propertiesFileLoadOrder");
-      if (Strings.isNullOrEmpty(propertiesFileLoadOrder)) {
+      if (propertiesFileLoadOrder == null || propertiesFileLoadOrder.isEmpty()) {
          return PROPERTIES_FILE_LOAD_ORDER_DEFAULT;
       }
       if ( !propertiesFileLoadOrder.equalsIgnoreCase(PROPERTIES_FILE_LOAD_ORDER_FIRST) &&
